@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber University |Portfolio</title>
+    
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CYBER<span>.CORE</span></div>
+        <ul class="nav-links">
+            <li class="nav-item active" data-target="home">Bosh sahifa</li>
+            <li class="nav-item" data-target="about">Men haqimda</li>
+            <li class="nav-item" data-target="skills">Ko'nikmalar</li>
+            <li class="nav-item" data-target="projects">Loyihalar</li>
+            <li class="nav-item" data-target="contact">Aloqa</li>
+        </ul>
+    </nav>
+
+    <main class="main-container">
+
+        <section class="page-section active" id="home">
+            <div class="hero-wrapper animate-fade-up">
+                <span class="badge"><i class="fa-solid fa-graduation-cap"></i> Cyber University — 1-Kurs Talabasi</span>
+                <h1>Kelajakni Kodlayotgan <br><span class="text-gradient">Raqobatbardosh Muhandis</span></h1>
+                <p>IT ekotizimi, startaplar va yuqori raqobatli muhitda ijtimoiy hamda texnik faollik bilan o'z yo'lini yaratayotgan talaba.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="switchPage('projects')">Loyihalarimni ko'rish</button>
+                    <button class="btn btn-secondary" onclick="switchPage('contact')">Bog'lanish</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="about">
+            <div class="about-grid">
+                <div class="about-img-container animate-fade-right">
+
+                                        <div class="profile-avatar">
+                        <img src="Screenshot 2025-07-15 230220.jpg" alt="Abdunosir Safarov" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+                    </div>
+
+                </div>
+                <div class="about-text animate-fade-left">
+                    <span class="badge">Shaxsiyat</span>
+                    <h2>Abdunosir Safarov</h2>
+                    <p class="subtitle">Cyber University talabasi & Kelajak Startaperi</p>
+                    <p>Men Cyber University muhitidagi shiddatli raqobatni qadrlayman. Darslardan tashqari doimiy ravishda shaxsiy loyihalar, pet-proyektlar ustida ishlayman va IT hamjamiyatlarida faolman. Maqsadim — faqat dasturchi bo'lish emas, balki real muammolarga biznes tomondan ham yechim topishdir.</p>
+                    
+                    <div class="personal-info-list">
+                        <div class="info-item"><i class="fa-solid fa-phone text-green"></i> <span>+998 (33) 428-23-67</span></div>
+                        <div class="info-item"><i class="fa-solid fa-envelope text-blue"></i> <span>safarovabdunosir52@gmail.com</span></div>
+                        <div class="info-item"><i class="fa-solid fa-location-dot text-purple"></i> <span>Toshkent, O'zbekiston</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="skills">
+            <div class="section-header">
+                <span class="badge">Kuchli Tomonlar</span>
+                <h2>Texnik Bilimlar Tizimi</h2>
+                <p></p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-percent="55">
+                    <div class="skill-info">
+                        <div class="skill-meta"><i class="fa-brands fa-html5 text-orange"></i> <h3>HTML5 / CSS3</h3></div>
+                        <span class="skill-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-card" data-percent="30">
+                    <div class="skill-info">
+                        <div class="skill-meta"><i class="fa-brands fa-js text-yellow"></i> <h3>JavaScript</h3></div>
+                        <span class="skill-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar"><span></span></div>
+                </div>
+                <!-- Python -->
+                <div class="skill-card" data-percent="30">
+                    <div class="skill-info">
+                        <div class="skill-meta"><i class="fa-brands fa-python text-blue"></i> <h3>Python</h3></div>
+                        <span class="skill-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar"><span></span></div>
+                </div>
+                <!-- C++ -->
+                <div class="skill-card" data-percent="20">
+                    <div class="skill-info">
+                        <div class="skill-meta"><i class="fa-solid fa-code text-purple"></i> <h3>C++</h3></div>
+                        <span class="skill-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar"><span></span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. LOYIHALAR SAHIFASI (PROJECTS) -->
+        <section class="page-section" id="projects">
+            <div class="section-header">
+                <span class="badge">Portfolio</span>
+                <h2>Kutilayotgan & Kelajakdagi Loyihalar</h2>
+                <p>Cyber University va IT ekotizimida mavjud bo'lmagan, yaqin oylarda amalga oshirishni rejalashtirgan startap g'oyalarim.</p>
+            </div>
+
+            <!-- 1-Kelajakdagi Loyiha -->
+<div class="project-card" style="border: 1px dashed rgba(0, 255, 163, 0.2);">
+    <div class="p-icon"><i class="fa-solid fa-brain text-purple"></i></div>
+    <h3>Cyber AI Co-Pilot (In Development)</h3>
+    <p>Cyber University talabalari uchun dars modullari va ichki imtihon tizimiga moslashtirilgan, qiyin mavzularda shaxsiy tyutorlik qiluvchi sun'iy intellekt yordamchisi.</p>
+    <div class="tags">
+        <span>Python</span>
+        <span>OpenAI API</span>
+        <span>LLM</span>
+        <span>Future</span>
+    </div>
+</div>
+
+<!-- 2-Kelajakdagi Loyiha -->
+<div class="project-card" style="border: 1px dashed rgba(0, 255, 163, 0.2);">
+    <div class="p-icon"><i class="fa-solid fa-network-wired text-blue"></i></div>
+    <h3>UniMatch - Startup Team Finder</h3>
+    <p>Universitet ichidagi dasturchilar, dizaynerlar va marketologlarni yagona tarmoqqa birlashtirib, xakatoni va startaplar uchun jamoa shakllantiruvchi yopiq platforma.</p>
+    <div class="tags">
+        <span>React.js</span>
+        <span>Node.js</span>
+        <span>WebSockets</span>
+        <span>Idea</span>
+    </div>
+</div>
+
+        </section>
+
+        <!-- 5. ALOQA SAHIFASI (CONTACT) -->
+        <section class="page-section" id="contact">
+            <div class="contact-wrapper">
+                <h2>Men bilan aloqa</h2>
+                <p>Raqobatli muhitda kuchli networking yaratish yoki startap g'oyalarni muhokama qilish uchun yozing.</p>
+                
+                            <div class="social-box">
+                <a href="https://t.me/Abdunosir_2007" target="_blank" class="social-item telegram"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                <a href="https://instagram.com/Abdunosir_74.07" target="_blank" class="social-item instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/in/abdunosir-safarov-6a9805437" target="_blank" class="social-item linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Abdunosir-2007/My-first-portfolio" target="_blank" class="social-item github"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

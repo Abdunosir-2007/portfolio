@@ -1,0 +1,124 @@
+:root {
+    --bg: #060913;
+    --card: #0d1224;
+    --accent: #00ffa3; /* Ultra Neon Yashil */
+    --text: #f3f4f6;
+    --text-muted: #6b7280;
+    --gradient: linear-gradient(135deg, #00ffa3 0%, #00b8ff 100%);
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* NAVBAR TIZIMI */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.5rem 8%; position: fixed; width: 100%; top: 0; left: 0;
+    background: rgba(6, 9, 19, 0.7); backdrop-filter: blur(20px);
+    z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.logo { font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; }
+.logo span { color: var(--accent); }
+
+.nav-links { display: flex; list-style: none; gap: 1.8rem; }
+.nav-item {
+    color: var(--text-muted); cursor: pointer; font-size: 0.95rem;
+    font-weight: 500; transition: 0.3s ease; position: relative;
+}
+.nav-item:hover, .nav-item.active { color: var(--accent); }
+
+/* MULTI-PAGE TIZIMI (Yashirin va Faol sahifalar) */
+.page-section {
+    display: none; min-height: 100vh; padding: 120px 8% 60px 8%;
+    align-items: center; justify-content: center;
+}
+.page-section.active { display: flex; flex-direction: column; }
+
+/* ANIMATSIYALAR */
+.animate-fade-up { animation: fadeUp 0.8s forwards ease-out; }
+.animate-fade-left { animation: fadeLeft 0.8s forwards ease-out; }
+.animate-fade-right { animation: fadeRight 0.8s forwards ease-out; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeLeft { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeRight { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+
+/* HERO SECTION (BOSH SAHIFA) */
+.hero-wrapper { text-align: center; max-width: 850px; }
+.badge {
+    background: rgba(0, 255, 163, 0.08); color: var(--accent);
+    padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.85rem;
+    font-weight: 600; border: 1px solid rgba(0, 255, 163, 0.2);
+    margin-bottom: 2rem; display: inline-block;
+}
+h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; }
+.text-gradient { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-wrapper p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2.5rem; }
+.hero-actions { display: flex; justify-content: center; gap: 1.5rem; }
+
+.btn { padding: 0.9rem 2.2rem; border-radius: 10px; font-weight: 600; cursor: pointer; transition: 0.3s; border: none; }
+.btn-primary { background: var(--accent); color: #000; box-shadow: 0 0 20px rgba(0, 255, 163, 0.3); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(0, 255, 163, 0.5); }
+.btn-secondary { background: rgba(255, 255, 255, 0.03); color: #fff; border: 1px solid rgba(255,255,255,0.08); }
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* ABOUT SECTION (MEN HAQIMDA + RASM O'RNI) */
+.about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; width: 100%; max-width: 1100px; align-items: center; }
+.profile-avatar {
+    width: 320px; height: 320px; background: var(--card); border-radius: 24px;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px dashed rgba(0, 255, 163, 0.3); font-size: 6rem; color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5); position: relative;
+}
+.about-text h2 { font-size: 2.5rem; margin-top: 0.5rem; }
+.subtitle { color: var(--accent); font-weight: 600; margin-bottom: 1.5rem; }
+.personal-info-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.info-item { display: flex; align-items: center; gap: 1rem; font-size: 1.05rem; }
+.info-item i { width: 25px; font-size: 1.2rem; }
+
+/* SKILLS SECTION (KO'NIKMALAR FOIZLI) */
+.section-header { text-align: center; margin-bottom: 3.5rem; }
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; width: 100%; max-width: 1000px; }
+.skill-card {
+    background: var(--card); border: 1px solid rgba(255,255,255,0.03);
+    padding: 1.8rem; border-radius: 16px; cursor: pointer; transition: 0.3s;
+}
+.skill-card:hover { border-color: var(--accent); transform: scale(1.01); }
+.skill-info { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+.skill-meta { display: flex; align-items: center; gap: 1rem; }
+.skill-meta i { font-size: 1.8rem; }
+.skill-percentage { font-weight: 700; color: var(--accent); }
+.progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+.progress-bar span { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, #00ffa3, #00b8ff); transition: width 1.2s ease-out; }
+
+/* LOYIHALAR GRID */
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; width: 100%; max-width: 1000px; }
+.project-card { background: var(--card); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.03); }
+.p-icon { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; }
+.tags { display: flex; gap: 0.5rem; margin-top: 1.5rem; }
+.tags span { background: rgba(255,255,255,0.04); padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; }
+
+/* ALOQA SAHIFASI (SOCIAL BOX) */
+.contact-wrapper { text-align: center; max-width: 600px; }
+.social-box { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+.social-item {
+    padding: 1rem; border-radius: 12px; text-decoration: none; color: #fff;
+    font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.8rem; transition: 0.3s;
+}
+.telegram { background: #229ED9; }
+.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.linkedin { background: #0077b5; }
+.github { background: #24292e; }
+.social-item:hover { transform: translateY(-4px); filter: brightness(1.2); }
+
+/* RANG KODLARI */
+.text-orange { color: #ff6d00; } .text-yellow { color: #ffd600; } .text-blue { color: #00b8ff; } .text-purple { color: #a020f0; } .text-green { color: #00ffa3; }
