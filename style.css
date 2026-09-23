@@ -117,7 +117,7 @@ h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.5re
 .telegram { background: #229ED9; }
 .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
 .linkedin { background: #0077b5; }
-.github { background: #24292e; }
+.whatsapp { background: #25D366; }
 .social-item:hover { transform: translateY(-4px); filter: brightness(1.2); }
 
 /* RANG KODLARI */
